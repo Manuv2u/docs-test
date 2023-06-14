@@ -7,4 +7,3 @@ asciidoc:
     table-caption: false
 nav:
   - modules/product-design-specifications/nav.adoc
-  - modules/ROOT/nav.adoc

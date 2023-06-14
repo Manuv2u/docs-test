@@ -1,0 +1,25 @@
+site:
+  title: KBT-Documentation
+  start_page: Documentation:product-requirement-specifications:pr103.adoc
+
+content:
+  sources:
+    - url: https://github.com/Manuv2u/docs-test.git
+      branches: feature
+      start_path: docs
+
+asciidoc:
+  attributes:
+    experimental: true
+    idprefix: custom-prefix
+    idseparator: "-"
+    page-pagination: simple
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+
+output:
+  clean: true
+  dir: ./public

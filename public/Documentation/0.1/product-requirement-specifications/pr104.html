@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PR 100004: Product Requirement Specification for Vibhu Class III Controller :: KBT-Documentation</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">KBT-Documentation</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Documentation" data-version="0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Contents</span>
+    <span class="version">0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Contents</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="pr103.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Manuv2u/docs-test/edit/feature/docs/modules/product-requirement-specifications/pages/pr104.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">PR 100004: Product Requirement Specification for Vibhu Class III Controller</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Contents</div>
+<ul class="sectlevel1">
+<li><a href="#custom-prefixdefinition">1. Definition</a></li>
+<li><a href="#custom-prefixintroduction">2. Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#custom-prefixpurpose">2.1. Purpose</a></li>
+<li><a href="#custom-prefixintended-audience-and-reading-suggestions">2.2. Intended Audience and Reading Suggestions</a></li>
+<li><a href="#custom-prefixproject-scope">2.3. Project Scope</a></li>
+</ul>
+</li>
+<li><a href="#custom-prefixoverall-description">3. Overall Description</a>
+<ul class="sectlevel2">
+<li><a href="#custom-prefixproduct-features">3.1. Product Features</a></li>
+<li><a href="#custom-prefixuser-classes-and-characteristics">3.2. User Classes and Characteristics</a></li>
+<li><a href="#custom-prefixoperating-environment">3.3. Operating Environment</a></li>
+<li><a href="#custom-prefixdesign-and-implementation-constraints">3.4. Design and Implementation Constraints</a></li>
+<li><a href="#custom-prefixassumptions-and-dependencies">3.5. Assumptions and Dependencies</a>
+<ul class="sectlevel3">
+<li><a href="#custom-prefixgeneral-assumptions">3.5.1. General Assumptions</a></li>
+<li><a href="#custom-prefixtechnical-assumptions">3.5.2. Technical Assumptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#custom-prefixsystem-features-of-vibhu-class-iii">4. System Features of Vibhu Class III</a>
+<ul class="sectlevel2">
+<li><a href="#custom-prefixaccuracy-class-iii">4.1. Accuracy Class III</a>
+<ul class="sectlevel3">
+<li><a href="#custom-prefixdescription-and-priority">4.1.1. Description and Priority</a></li>
+<li><a href="#custom-prefixsetting-accuracy">4.1.2. Setting Accuracy</a></li>
+<li><a href="#custom-prefixaction-items">4.1.3. Action Items</a></li>
+</ul>
+</li>
+<li><a href="#custom-prefixtare-and-zero-setting">4.2. Tare and Zero Setting</a>
+<ul class="sectlevel3">
+<li><a href="#custom-prefixtare">4.2.1. Tare</a></li>
+<li><a href="#custom-prefixzero-setting">4.2.2. Zero Setting</a></li>
+</ul>
+</li>
+<li><a href="#custom-prefixsecurity-requirements-for-configurations-setting">4.3. Security Requirements for Configurations Setting</a>
+<ul class="sectlevel3">
+<li><a href="#custom-prefixconfiguration-settings">4.3.1. Configuration Settings</a></li>
+<li><a href="#custom-prefixsecurity">4.3.2. Security</a></li>
+<li><a href="#custom-prefixmanual-access">4.3.3. Manual Access</a></li>
+<li><a href="#custom-prefixwireless-access">4.3.4. Wireless Access</a></li>
+<li><a href="#custom-prefixaction-items-2">4.3.5. Action Items</a></li>
+</ul>
+</li>
+<li><a href="#custom-prefixsecurity-requirements-for-calibration">4.4. Security Requirements for Calibration</a>
+<ul class="sectlevel3">
+<li><a href="#custom-prefixcalibration-settings">4.4.1. Calibration Settings</a></li>
+<li><a href="#custom-prefixsecurity-2">4.4.2. Security</a></li>
+<li><a href="#custom-prefixmanual-access-2">4.4.3. Manual Access</a></li>
+<li><a href="#custom-prefixwireless-access-2">4.4.4. Wireless Access</a></li>
+<li><a href="#custom-prefixaction-items-3">4.4.5. Action Items</a></li>
+</ul>
+</li>
+<li><a href="#custom-prefixcommunication-requirements">4.5. Communication Requirements</a>
+<ul class="sectlevel3">
+<li><a href="#custom-prefixmenu-items">4.5.1. Menu items</a></li>
+<li><a href="#custom-prefixaction-items-4">4.5.2. Action Items</a></li>
+</ul>
+</li>
+<li><a href="#custom-prefixserial-number-convention">4.6. Serial Number Convention</a>
+<ul class="sectlevel3">
+<li><a href="#custom-prefixgeneral-naming-convention">4.6.1. General Naming Convention</a></li>
+<li><a href="#custom-prefixcontroller-serial-number">4.6.2. Controller Serial Number</a></li>
+<li><a href="#custom-prefixbluetooth-module-serial-number">4.6.3. Bluetooth Module Serial Number</a></li>
+<li><a href="#custom-prefixaction-items-5">4.6.4. Action Items</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#custom-prefixchecklist">5. Checklist</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-prefixdefinition"><a class="anchor" href="#custom-prefixdefinition"></a>1. Definition</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document defines the requirement specification for <strong>VIBHU</strong> weighing scale controller with <strong>Class III</strong> accuracy.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-prefixintroduction"><a class="anchor" href="#custom-prefixintroduction"></a>2. Introduction</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="custom-prefixpurpose"><a class="anchor" href="#custom-prefixpurpose"></a>2.1. Purpose</h3>
+<div class="paragraph">
+<p>The purpose of this document is to describe the technical and operational requirements for developing the <strong>VIBHU Class III</strong> controller for weighing scales.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixintended-audience-and-reading-suggestions"><a class="anchor" href="#custom-prefixintended-audience-and-reading-suggestions"></a>2.2. Intended Audience and Reading Suggestions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Product Team</p>
+</li>
+<li>
+<p>Development Team (Hardware, Software)</p>
+</li>
+<li>
+<p>Testers</p>
+</li>
+<li>
+<p>PCB designer</p>
+</li>
+<li>
+<p>Consultants</p>
+</li>
+<li>
+<p>Business Owners</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixproject-scope"><a class="anchor" href="#custom-prefixproject-scope"></a>2.3. Project Scope</h3>
+<div class="paragraph">
+<p>The controllers have to meet the aims listed below,</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Conform to OIML Standards</p>
+</li>
+<li>
+<p>Remotely Configurable</p>
+</li>
+<li>
+<p>Calibrated both manually and remotely</p>
+</li>
+<li>
+<p>Remotely acquire measured data</p>
+</li>
+<li>
+<p>Keypad to select PLC</p>
+</li>
+<li>
+<p>Provide calculations based on imported PLC data</p>
+</li>
+<li>
+<p>Create Billing of items</p>
+</li>
+<li>
+<p>Display QR Code for User to access the Billing</p>
+</li>
+<li>
+<p>Take snapshot image of the item being weighed and upload the image to the cloud endpoint</p>
+</li>
+<li>
+<p>Connect to a local thermal printer (inbuilt or otherwise) by means of wireless or otherwise - TBD</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-prefixoverall-description"><a class="anchor" href="#custom-prefixoverall-description"></a>3. Overall Description</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="custom-prefixproduct-features"><a class="anchor" href="#custom-prefixproduct-features"></a>3.1. Product Features</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Accuracy Class III</p>
+</li>
+<li>
+<p>Connect to C3 class Load Cells</p>
+</li>
+<li>
+<p>Remotely Configurable</p>
+</li>
+<li>
+<p>Connect to LCD or Ink Display</p>
+</li>
+<li>
+<p>Connect to 25 Button touch Keypad</p>
+</li>
+<li>
+<p>Broadcasting Information</p>
+</li>
+<li>
+<p>Audio Alerts</p>
+</li>
+<li>
+<p>Visual Alerts</p>
+</li>
+<li>
+<p>Zero Setting and Tare</p>
+</li>
+<li>
+<p>Power and Tare Buttons</p>
+</li>
+<li>
+<p>Power Source Management</p>
+</li>
+<li>
+<p>Device Compactness</p>
+</li>
+<li>
+<p>Modular Assembly</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixuser-classes-and-characteristics"><a class="anchor" href="#custom-prefixuser-classes-and-characteristics"></a>3.2. User Classes and Characteristics</h3>
+<div class="paragraph">
+<p>Users of this device are expected to be with very limited or no knowledge about electronic and computing devices. And the weighing scale with this controller are expected to make a minimum of 6000 measurements daily.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixoperating-environment"><a class="anchor" href="#custom-prefixoperating-environment"></a>3.3. Operating Environment</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Must be compliant with <strong>OIML</strong> Standards (-10
+&#176;C to 70 &#176;C)</p>
+</li>
+<li>
+<p>Must endure rough handling</p>
+</li>
+<li>
+<p>Must be able to sustain frequent wobbling and shocks during loading and unloading of weights</p>
+</li>
+<li>
+<p>Must function in dust prone environment</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixdesign-and-implementation-constraints"><a class="anchor" href="#custom-prefixdesign-and-implementation-constraints"></a>3.4. Design and Implementation Constraints</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>No forced cooling system will be available</p>
+</li>
+<li>
+<p>Controller shall be placed within a metallic container</p>
+</li>
+<li>
+<p>All connections are to be sturdy but must be easier to assemble or disassemble</p>
+</li>
+<li>
+<p>Must be able to handle fluctuating AC input</p>
+</li>
+<li>
+<p>Controller must output to two displays</p>
+</li>
+<li>
+<p>Controller must establish internet connection with cloud endpoint</p>
+</li>
+<li>
+<p>Each Controller has an unique identity</p>
+</li>
+<li>
+<p>Each Controller must be able to download PLC data from the user using cloud endpoint</p>
+</li>
+<li>
+<p>Device must be able to print using a thermal printer. Inbuilt or otherwise. Wireless or otherwise.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixassumptions-and-dependencies"><a class="anchor" href="#custom-prefixassumptions-and-dependencies"></a>3.5. Assumptions and Dependencies</h3>
+<div class="sect3">
+<h4 id="custom-prefixgeneral-assumptions"><a class="anchor" href="#custom-prefixgeneral-assumptions"></a>3.5.1. General Assumptions</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>COTS components and reusable components conform to <strong>OIML</strong> specifications</p>
+</li>
+<li>
+<p>End user uses either SI or Imperial units, but never a combination of both</p>
+</li>
+<li>
+<p>End user shall use the device on level platform</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixtechnical-assumptions"><a class="anchor" href="#custom-prefixtechnical-assumptions"></a>3.5.2. Technical Assumptions</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Standard Bluetooth/BLE communication protocols are supported</p>
+</li>
+<li>
+<p>Standard electronic components are used. Avoid component which is proprietary or available in limited production capacities</p>
+</li>
+<li>
+<p>ISO standards applicable for PCB design is considered</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-prefixsystem-features-of-vibhu-class-iii"><a class="anchor" href="#custom-prefixsystem-features-of-vibhu-class-iii"></a>4. System Features of Vibhu Class III</h2>
+<div class="sectionbody">
+<div class="imageblock unresolved">
+<div class="content">
+<img src="../images/vibhu_block_dgm.png" alt="vibhu block dgm">
+</div>
+<div class="title">Figure 1. Vibhu Block Diagram</div>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="../images/vibhu_functional_block.png" alt="vibhu functional block">
+</div>
+<div class="title">Figure 2. Vibhu Functional Block Diagram</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="sect2">
+<h3 id="custom-prefixaccuracy-class-iii"><a class="anchor" href="#custom-prefixaccuracy-class-iii"></a>4.1. Accuracy Class III</h3>
+<div class="sect3">
+<h4 id="custom-prefixdescription-and-priority"><a class="anchor" href="#custom-prefixdescription-and-priority"></a>4.1.1. Description and Priority</h4>
+<div class="paragraph">
+<p>Weighing scales are divided based on Accuracy classes. Operational parameters are defined based on the Class. Controllers are designed to be <strong>CLASS III</strong> accuracy device.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixsetting-accuracy"><a class="anchor" href="#custom-prefixsetting-accuracy"></a>4.1.2. Setting Accuracy</h4>
+<div class="paragraph">
+<p>The following procedure is used to determine the accuracy of the weighing scale. The accuracy of weighing scale is defined by the Number of Verification scale as shown in the table below.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Accuracy Class wrt Verification Scale</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle" rowspan="2"><p class="tableblock"><em>Accuracy Class</em></p></td>
+<td class="tableblock halign-center valign-middle" rowspan="2"><p class="tableblock"><em>Verification scale interval e</em></p></td>
+<td class="tableblock halign-center valign-middle" colspan="2"><p class="tableblock"><em>Number if verification scale intervals n = Max/e</em></p></td>
+<td class="tableblock halign-center valign-middle" rowspan="2"><p class="tableblock"><em>Minimum capacity</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><em>minimum</em></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><em>maximum</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Special I</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.001 g &#8804; e</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">50 000<sup>*</sup></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">100e</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle" rowspan="2"><p class="tableblock">High II</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.001 g &#8804; e &#8804; 0.05 g</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">100</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">100 000</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">20e</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.1 g &#8804; e</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">50 000<sup>*</sup></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">100 000</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">50e</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle" rowspan="2"><p class="tableblock">Medium III</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.1 g &#8804; e &#8804; 2 g</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">50 000<sup>*</sup></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">10 000</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">20e</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 g &#8804; e</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">50 000<sup>*</sup></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">10 000</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">20e</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Ordinary IV</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 g &#8804; e</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">50 000<sup>*</sup></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">1000</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">10e</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Wherein <strong><em>Max</em></strong> is the maximum weight to be measured. Hence, considering a scales with max capacities ranging from 50 kg to 500 kg and to fit within the requirement of <strong><em>Accuracy Class III</em></strong>, different verification scale interval is calculated. Table below lists the minimum and maximum limits for each capacity.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Number of verification scale interval limits for various max capacities</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><strong><strong><em>e</em></strong> (g)</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">30</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">50</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><strong>5</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">6000</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">10 000</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><strong>10</strong></p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">10 000</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixaction-items"><a class="anchor" href="#custom-prefixaction-items"></a>4.1.3. Action Items</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Action Item</th>
+<th class="tableblock halign-center valign-middle">User</th>
+<th class="tableblock halign-center valign-middle">Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Set Max capacity of the Weighing Scale</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Factory</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Bluetooth</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Set Verification Scale Interval</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Factory</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Bluetooth</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixtare-and-zero-setting"><a class="anchor" href="#custom-prefixtare-and-zero-setting"></a>4.2. Tare and Zero Setting</h3>
+<div class="sect3">
+<h4 id="custom-prefixtare"><a class="anchor" href="#custom-prefixtare"></a>4.2.1. Tare</h4>
+<div class="paragraph">
+<p>For the Vibhu based weighing scale, <strong><em>Subtractive Tare</em></strong> is considered.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixzero-setting"><a class="anchor" href="#custom-prefixzero-setting"></a>4.2.2. Zero Setting</h4>
+<div class="paragraph">
+<p>The dead pan weight is captured during each startup. It is registered as <strong>ZERO</strong>. The new slope is calculated with the calibrated <strong>LOAD</strong> value to obtain the slope post start up.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixsecurity-requirements-for-configurations-setting"><a class="anchor" href="#custom-prefixsecurity-requirements-for-configurations-setting"></a>4.3. Security Requirements for Configurations Setting</h3>
+<div class="sect3">
+<h4 id="custom-prefixconfiguration-settings"><a class="anchor" href="#custom-prefixconfiguration-settings"></a>4.3.1. Configuration Settings</h4>
+<div class="paragraph">
+<p>Configurations listed below has to be set for the functioning of the weighing scale as designed. The access to controller to set the configuration must be secured from unauthorized access.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Maximum Capacity of the Weighing Scale</p>
+</li>
+<li>
+<p>Verification Scale Interval <strong><em>e</em></strong> of the Scale</p>
+</li>
+<li>
+<p>Designate Controller Serial Number</p>
+</li>
+<li>
+<p>Download Events</p>
+</li>
+<li>
+<p>Factory Reset</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixsecurity"><a class="anchor" href="#custom-prefixsecurity"></a>4.3.2. Security</h4>
+<div class="paragraph">
+<p>Any person access to the controller can edit the values to change the designed characteristics of the Weighing Scale. Any erroneous data entered here can result in the failure of the device to deliver accurate results. Securing these variables is paramount. Each Configuration Change Event must be recorded in the Event Logger. The format for the record in the Event logger must be as shown below</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>event count (000 to 999) , parameter ID ,  date and time ,  new value of the parameter</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixmanual-access"><a class="anchor" href="#custom-prefixmanual-access"></a>4.3.3. Manual Access</h4>
+<div class="paragraph">
+<p>The controller can be accessed via 4 button keypad. But for configuration settings, <strong><em>manual access is disallowed</em></strong>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixwireless-access"><a class="anchor" href="#custom-prefixwireless-access"></a>4.3.4. Wireless Access</h4>
+<div class="paragraph">
+<p>Wireless Access is achieved via Bluetooth. The controller is accessed via BT module. The Controller Serial Number is to be used as BT Broadcast ID. To securely access all the levels mentioned in the table below must be cleared.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Wireless Access Security broadview</caption>
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 28.5714%;">
+<col style="width: 57.1429%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-middle">Layer</th>
+<th class="tableblock halign-center valign-middle">Event</th>
+<th class="tableblock halign-center valign-middle">Challenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><strong>1</strong></p></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="paragraph">
+<p>User Login</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>User is Authorized through Prahari APP</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><strong>2</strong></p></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="paragraph">
+<p>BT Passkey</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>BT Passkey of BT Module broadcast id  matches data stored in DB</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixaction-items-2"><a class="anchor" href="#custom-prefixaction-items-2"></a>4.3.5. Action Items</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Action Item</th>
+<th class="tableblock halign-center valign-middle">User</th>
+<th class="tableblock halign-center valign-middle">Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Record Configuration Change Event in Event Logger</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Internal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Broadcast Controller S/N</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Bluetooth</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixsecurity-requirements-for-calibration"><a class="anchor" href="#custom-prefixsecurity-requirements-for-calibration"></a>4.4. Security Requirements for Calibration</h3>
+<div class="sect3">
+<h4 id="custom-prefixcalibration-settings"><a class="anchor" href="#custom-prefixcalibration-settings"></a>4.4.1. Calibration Settings</h4>
+<div class="paragraph">
+<p>For the weighing scale to perform accurately, it has to be calibrated to known weight conditions. Any load on the receptor is then either interpolated or extrapolated from the initial conditions. The calibration setting is paramount to the accuracy of the weight measurement. The following procedure should be used to calibrate the Vibhu based Weighing scales.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Enter Calibration Mode</p>
+</li>
+<li>
+<p>Clear the Pan for No Load or Zero setting</p>
+</li>
+<li>
+<p>Set a known standardized weight on the pan</p>
+</li>
+<li>
+<p>Enter the weight</p>
+</li>
+<li>
+<p>Record Calibration Date</p>
+</li>
+<li>
+<p>Exit Calibration</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixsecurity-2"><a class="anchor" href="#custom-prefixsecurity-2"></a>4.4.2. Security</h4>
+<div class="paragraph">
+<p>Any person access to the calibration, erroneous entries leads to false results. Hence, to calibrate the device, security has to be in place, to monitor and control the access to this setting. Both manual and wireless access is allowed to calibrate the device.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixmanual-access-2"><a class="anchor" href="#custom-prefixmanual-access-2"></a>4.4.3. Manual Access</h4>
+<div class="paragraph">
+<p>For Manual access, the following steps are to be followed to calibrate the device.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Break the Seal to access the Controller.</p>
+</li>
+<li>
+<p>Push the spring button on Controller PCB to enter calibration mode</p>
+</li>
+<li>
+<p>Enter the 6 digit Passkey via 4 button keypad</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixwireless-access-2"><a class="anchor" href="#custom-prefixwireless-access-2"></a>4.4.4. Wireless Access</h4>
+<div class="paragraph">
+<p>Accessed by authorized User via Prahari App.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixaction-items-3"><a class="anchor" href="#custom-prefixaction-items-3"></a>4.4.5. Action Items</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Action Item</th>
+<th class="tableblock halign-center valign-middle">User</th>
+<th class="tableblock halign-center valign-middle">Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Break the Seal</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">User</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Physical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Push Button Status for Manual Calibration</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">User</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Physical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>6 digit Passkey to access calibration mode</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">User</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Physical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Alphanumeric Passkey to access calibration mode</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">User</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Bluetooth</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Record No Load</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">User</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Keypad/ BT</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Record Load</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">User</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Keypad/ BT</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Record Calibration Event in Event Logger</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Internal</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixcommunication-requirements"><a class="anchor" href="#custom-prefixcommunication-requirements"></a>4.5. Communication Requirements</h3>
+<div class="paragraph">
+<p>The weighing scale has to communicate with the user via the following modes.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bluetooth</p>
+</li>
+<li>
+<p>6 Digit 7 Segment Display</p>
+</li>
+<li>
+<p>LED</p>
+</li>
+<li>
+<p>Beeper</p>
+</li>
+<li>
+<p>4 Button Keypad</p>
+<div class="ulist">
+<ul>
+<li>
+<p>&#9776;(MENU)</p>
+</li>
+<li>
+<p>&#8963; (UP)</p>
+</li>
+<li>
+<p>&#8964; (DOWN)</p>
+</li>
+<li>
+<p>&#10004; (OK)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following table shows the communications to be achieved between the weighing scale and the human user.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-middle">Event</th>
+<th class="tableblock halign-center valign-middle">Bluetooth</th>
+<th class="tableblock halign-center valign-middle">7 Segment Display</th>
+<th class="tableblock halign-center valign-middle">LED</th>
+<th class="tableblock halign-center valign-middle">Beeper</th>
+<th class="tableblock halign-center valign-middle">Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Power ON</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Flash all segments</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">GREEN</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">On Charge</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Display Battery Charge Status</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">RED</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">1 Short Beep</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Full Charge</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Display Battery Charge Status</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">OFF</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Menu Scroll NEXT</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Display Items</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">1 Short Beep</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><strong>&#8963;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Menu Scroll PREVIOUS</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Display Items</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">1 Short Beep</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><strong>&#8964;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Option SELECT</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Display Items</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">1 Long Beep</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><strong>&#10004;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Number INCREASE</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Display Items</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">1 Short Beep</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><strong>&#8963;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Number DECREASE</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Display Items</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">1 Short Beep</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><strong>&#8964;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">EXIT to Previous Menu</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Display Items</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">1 Long Beep</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><strong>&#9776;</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Low Battery</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Display Battery Charge Status</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">"LoBat"</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Random or no value</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Err 02</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Err 02</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Blink RED and GREEN</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Scale Overload</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Scale Overload</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Max OL</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Blink RED</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">2 Short Beeps + 1 sec interval</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="custom-prefixmenu-items"><a class="anchor" href="#custom-prefixmenu-items"></a>4.5.1. Menu items</h4>
+<div class="paragraph">
+<p>When in Manually accessed Calibration mode, the menu items to be displayed on the 6 Digit 7 Segment displays are as follows,</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>System Configuration Settings</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Max Capacity</p>
+</li>
+<li>
+<p>Verification Scale Interval</p>
+</li>
+<li>
+<p>Serial Number</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Last Calibration Settings</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Last Calibration Date</p>
+</li>
+<li>
+<p>Calibrate</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Set Zero</p>
+</li>
+<li>
+<p>Set Load</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enter Weight</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixaction-items-4"><a class="anchor" href="#custom-prefixaction-items-4"></a>4.5.2. Action Items</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Action Item</th>
+<th class="tableblock halign-center valign-middle">User</th>
+<th class="tableblock halign-center valign-middle">Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Use Rocker switch to Power ON</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">User</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Physical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Battery Charge Status on Weighing Scale</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">User</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">LED</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Battery Charge Status on App</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">User</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Bluetooth</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Menu on Weighing Scale</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">User</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Physical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Navigate Menu on Weighing Scale</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">User</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Keypad</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Error on Weighing Scale</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">User</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">7 Segment display, LED and Beeper</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Error on App</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">User</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Bluetooth</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixserial-number-convention"><a class="anchor" href="#custom-prefixserial-number-convention"></a>4.6. Serial Number Convention</h3>
+<div class="paragraph">
+<p>Each component is given a serial number for traceability. Components are classified as either proprietary of  Kanilebettu Technologies or commercially bought out items.</p>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixgeneral-naming-convention"><a class="anchor" href="#custom-prefixgeneral-naming-convention"></a>4.6.1. General Naming Convention</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc"> PR 100018 S001 2200 000x
+
+Where,
+
+    PR          Component Classification
+    100018      Part Number
+    S001        Vendor Code
+    22          Year of Manufacture
+    00          Series of Manufacture (00 - ZZ)
+    000x        Running Number (0001 to 9999)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixcontroller-serial-number"><a class="anchor" href="#custom-prefixcontroller-serial-number"></a>4.6.2. Controller Serial Number</h4>
+<div class="paragraph">
+<p>Part Number for Vibhu Controller is</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>PR 100018</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The remainder of the numbers shall be issued during production by Kanilebettu Technologies.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixbluetooth-module-serial-number"><a class="anchor" href="#custom-prefixbluetooth-module-serial-number"></a>4.6.3. Bluetooth Module Serial Number</h4>
+<div class="paragraph">
+<p>Part Number for the bluetooth module is</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>CS 100022</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The remainder of the numbers shall be issued during production by Kanilebettu Technologies.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-prefixaction-items-5"><a class="anchor" href="#custom-prefixaction-items-5"></a>4.6.4. Action Items</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Action Item</th>
+<th class="tableblock halign-center valign-middle">User</th>
+<th class="tableblock halign-center valign-middle">Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Record Device Serial Number</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Factory</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Flash via Bluetooth</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Broadcast Controller Serial Number</p>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Factory</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Flash via Bluetooth</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-prefixchecklist"><a class="anchor" href="#custom-prefixchecklist"></a>5. Checklist</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A list of all action items mentioned in this document.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

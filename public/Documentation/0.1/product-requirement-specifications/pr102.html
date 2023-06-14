@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PR 100002: Product Requirement Specification for Weighing Scale Controllers :: KBT-Documentation</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">KBT-Documentation</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Documentation" data-version="0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Contents</span>
+    <span class="version">0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Contents</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="pr103.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Manuv2u/docs-test/edit/feature/docs/modules/product-requirement-specifications/pages/pr102.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">PR 100002: Product Requirement Specification for Weighing Scale Controllers</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Contents</div>
+<ul class="sectlevel1">
+<li><a href="#custom-prefixdefinition">Definition</a></li>
+<li><a href="#custom-prefixintroduction">Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#custom-prefixpurpose">Purpose</a></li>
+<li><a href="#custom-prefixintended-audience-and-reading-suggestions">Intended Audience and Reading Suggestions</a></li>
+<li><a href="#custom-prefixproject-scope">Project Scope</a></li>
+<li><a href="#custom-prefixproduct-description">Product Description</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="custom-prefixdefinition"><a class="anchor" href="#custom-prefixdefinition"></a>Definition</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document defines the requirement specification for Weighing Scale Controller to be developed by Prahari Engineering.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-prefixintroduction"><a class="anchor" href="#custom-prefixintroduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="custom-prefixpurpose"><a class="anchor" href="#custom-prefixpurpose"></a>Purpose</h3>
+<div class="paragraph">
+<p>The purpose of this document is to describe the aim, goals and standards for developing the controllers for weighing scales with bi-directional communication and other capabilities.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixintended-audience-and-reading-suggestions"><a class="anchor" href="#custom-prefixintended-audience-and-reading-suggestions"></a>Intended Audience and Reading Suggestions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Product Team</p>
+</li>
+<li>
+<p>Development Team (Hardware, Software)</p>
+</li>
+<li>
+<p>Testers</p>
+</li>
+<li>
+<p>PCB designer</p>
+</li>
+<li>
+<p>Consultants</p>
+</li>
+<li>
+<p>Business Owners</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixproject-scope"><a class="anchor" href="#custom-prefixproject-scope"></a>Project Scope</h3>
+<div class="paragraph">
+<p>Digital weighing scales have been used in conjunction with an accounting software. The process has been limited to a wired system and a dedicated software application. Such a system requires a need for a dedicated immobile personal computer and a trained personnel to operate the software. The inadequacy of this method has ensured a persistent use of paper documents to record and maintain the measured data.</p>
+</div>
+<div class="paragraph">
+<p>Controllers, which are the main processing unit in the digital weighing scale, acquires and processes data from load cell. These controllers are calibrated to predefined weights. These controllers are intended to communicate with a cloud based SaaS application.</p>
+</div>
+<div class="paragraph">
+<p>The aims of the Prahari family Controllers are</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Securely Calibrate the device using mobile application through wireless communication.</p>
+</li>
+<li>
+<p>Send measured weights to the mobile application wirelessly.</p>
+</li>
+<li>
+<p>Compute data based on the measured weights, such as count, rate etc.</p>
+</li>
+<li>
+<p>Print the computed values using an attached printer.</p>
+</li>
+<li>
+<p>Send computed values to the mobile application wirelessly.</p>
+</li>
+<li>
+<p>Record image of the weighed item and tag it to the measured and input PLC.</p>
+</li>
+<li>
+<p>Send the image along with the measured value and the input PLC to the mobile application.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-prefixproduct-description"><a class="anchor" href="#custom-prefixproduct-description"></a>Product Description</h3>
+<div class="paragraph">
+<p>To achieve the aims defined in the project scope, families of products are to be developed. Based on the needs of the intended business usage, the products are developed to meet certain or all the aims mentioned in the scope. The family of products to be developed are listed in table 1.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Prahari Engineering Controllers</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Part Number</th>
+<th class="tableblock halign-left valign-top">Product Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>PR 100017</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Ribhu Class III</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>PR 100018</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Vibhu Class III</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
