@@ -108,11 +108,11 @@ Users of this device are expected to be with very limited or no knowledge about 
 == System Features of Ribhu Class III
 
 .Ribhu Block Diagram
-image::../images/ribhu_block_dgm.png[]
+image::{imagesdir}/../../images/ribhu_block_dgm.png[]
 
 
 .Ribhu Functional Block Diagram
-image::../images/ribhu_functional_dgm.png[]
+image::{imagesdir}/../../images/ribhu_functional_dgm.png[]
 
 
 <<<
